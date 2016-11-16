@@ -87,8 +87,22 @@ public struct Stack<T> {
 }
 ```
 
-Notice that a push puts the new element at the end of the array, not the beginning. Inserting at the beginning of an array is expensive, an **O(n)** operation, because it requires all existing array elements to be shifted in memory. Adding at the end is **O(1)**; it always takes the same amount of time, regardless of the size of the array.
+Notice that a push puts the new element at the end of the array, not the beginning. 
+Inserting at the beginning of an array is expensive, an **O(n)** operation, 
+because it requires all existing array elements to be shifted in memory. 
+Adding at the end is **O(1)**; it always takes the same amount of time, 
+regardless of the size of the array.
 
-Fun fact about stacks: Each time you call a function or a method, the CPU places the return address on a stack. When the function ends, the CPU uses that return address to jump back to the caller. That's why if you call too many functions -- for example in a recursive function that never ends -- you get a so-called "stack overflow" as the CPU stack has run out of space.
+푸시는 새로운 요소를 배열의 맨 처음이 아닌 맨 마지막에 넣는다는 것을 명심하도록 하자. 배열의 맨 처음에 추가하는 것은 **O(n)** 연산으로 메모리에 있는 모든 기존 배열 요소를 이동시켜야 하기 때문에 비용이 많이든다.
+맨 끝에 추가하는 것은 **O(1)** 으로 배열의 크기에 관계없이 항상 같은 시간이 소요된다.
+
+Fun fact about stacks: 
+Each time you call a function or a method, 
+the CPU places the return address on a stack. 
+When the function ends, the CPU uses that return address to jump back to the caller. 
+That's why if you call too many functions -- for example in a recursive function that never ends -- 
+you get a so-called "stack overflow" as the CPU stack has run out of space.
+
+스택에 관한 재미있는 사실은 매번 함수나 메소드를 호출 할 때마다 CPU는 반환 주소를 스택에 배치한다는 점이다.
 
 *Written for Swift Algorithm Club by Matthijs Hollemans*
